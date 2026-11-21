@@ -89,6 +89,9 @@
   .tier { position: relative; background: var(--card); border: 2px dashed var(--coral); border-radius: 18px; padding: 30px 16px 16px; text-align: center; }
   .tier .num { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--coral); color: #fff; font-weight: 900; padding: 2px 16px; border-radius: 99px; white-space: nowrap; }
   .tier .ic { font-size: 34px; }
+  .tier .pic { height: 150px; margin: 0 0 10px; border-radius: 14px; background: radial-gradient(circle at 50% 60%, #FFE9DA 0, #FBF1E4 70%); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .tier .pic img { height: 140px; width: auto; object-fit: contain; }
+  .tier .pic.wide img { height: 100%; width: 100%; object-fit: cover; }
   .tier h3 { margin: 4px 0; font-size: 16px; }
   .tier p { margin: 0; font-size: 13.5px; color: var(--soft); }
   @media (max-width: 820px) { .tiers { grid-template-columns: 1fr 1fr; row-gap: 26px; } }
@@ -148,10 +151,10 @@
     <h2>預約達標獎勵</h2>
     <p class="sub">預約人數越多，上架後全體玩家拿到的獎勵越多！上架後打開遊戲信箱就能領取。</p>
     <div class="tiers">
-      <div class="tier"><div class="num">300 人</div><div class="ic">🧋</div><h3>1,000 金幣＋預約限定飲品</h3><p>「啵啵開幕特調」：鮮奶油奶茶加芋圓和珍珠，只有預約獎勵才解鎖的祕密配方。</p></div>
-      <div class="tier"><div class="num">1,000 人</div><div class="ic">🎈</div><h3>限定店面「開幕慶典」</h3><p>彩帶、氣球和祝賀花籃，把整間店換成開幕日的熱鬧樣子。</p></div>
-      <div class="tier"><div class="num">3,000 人</div><div class="ic">🐰</div><h3>莓莓「開幕直播主」服裝</h3><p>應援 T 恤配彩帶髮箍、愛心自拍棒，穿著時直播爆紅獎勵加倍，還有限定台詞。</p></div>
-      <div class="tier"><div class="num">5,000 人</div><div class="ic">🐦</div><h3>神秘客人提早來店</h3><p>達標就揭曉！她會帶來好運和常客們寄給店長的明信片，預約玩家還多一張限定明信片。</p></div>
+      <div class="tier"><div class="num">300 人</div><div class="pic"><img src="img/rewards/drink.png" alt="預約限定飲品「啵啵開幕特調」" loading="lazy"></div><h3>1,000 金幣＋預約限定飲品</h3><p>「啵啵開幕特調」：鮮奶油奶茶加芋圓和珍珠，只有預約獎勵才解鎖的祕密配方。</p></div>
+      <div class="tier"><div class="num">1,000 人</div><div class="pic wide"><img src="img/rewards/store.jpg" alt="限定店面「開幕慶典」：氣球、彩帶和祝賀花籃" loading="lazy"></div><h3>限定店面「開幕慶典」</h3><p>彩帶、氣球和祝賀花籃，把整間店換成開幕日的熱鬧樣子。</p></div>
+      <div class="tier"><div class="num">3,000 人</div><div class="pic"><img src="img/rewards/bunny.png" alt="莓莓穿「開幕直播主」服裝" loading="lazy"></div><h3>莓莓「開幕直播主」服裝</h3><p>應援 T 恤配彩帶髮箍、愛心自拍棒，穿著時直播爆紅獎勵加倍，還有限定台詞。</p></div>
+      <div class="tier"><div class="num">5,000 人</div><div class="pic"><img src="img/rewards/magpie.png" alt="喜鵲信差「喜喜」" loading="lazy"></div><h3>喜鵲信差提早來店</h3><p>喜鵲「喜喜」會帶來好運和常客們寄給店長的明信片，預約玩家還多一張限定明信片。</p></div>
     </div>
     <p class="hint">預約人數會在社群每週更新</p>
   </section>
