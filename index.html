@@ -206,7 +206,7 @@
 <script>
   // 預約連結：開放後把網址填進來，按鈕就會從「即將開放」變成可以按
   const STORES = {
-    ios: { url: '', soon: '即將開放預訂' },          // 例：https://apps.apple.com/tw/app/id6836149553
+    ios: { url: 'https://apps.apple.com/tw/app/id6836149553', soon: '即將開放預訂' },          // 例：https://apps.apple.com/tw/app/id6836149553
     android: { url: '', soon: '12 月初開放預先註冊' },     // 例：https://play.google.com/store/apps/details?id=com.cupcuppop.game
   };
   const ICON = {
@@ -235,6 +235,8 @@
     a.addEventListener('click', () => gtag('event', 'social_click', { network: a.textContent.trim(), transport_type: 'beacon' })));
   if (!STORES.ios.url && !STORES.android.url)
     document.getElementById('storeNote').textContent = '商店預約即將開放，先追蹤我們就不會錯過！';
+  else if (STORES.ios.url && !STORES.android.url)
+    document.getElementById('storeNote').textContent = 'iPhone 已開放預訂，上市當天自動下載；Android 12 月初開放預先註冊！';
 </script>
 </body>
 </html>
