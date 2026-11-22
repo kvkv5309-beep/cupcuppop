@@ -304,8 +304,14 @@
     });
     setTimeout(() => bar.querySelector('.fill').style.width = Math.min(100, pct) + '%', 200);
     document.querySelectorAll('#' + tiersId + ' .tier').forEach((t, i) => t.classList.toggle('done', n >= marks[i]));
-    const el = document.querySelector('[data-n="' + key + '"]'), t0 = performance.now();
-    (function tick() { const k = Math.min(1, (performance.now() - t0) / 1000); el.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))).toLocaleString(); if (k < 1) requestAnimationFrame(tick); })();
+    // 先寫上最終數字；畫面看得到時才跑數字動畫（背景分頁 requestAnimationFrame 不會跑），1.3 秒後一定補回最終數字
+    const el = document.querySelector('[data-n="' + key + '"]'), final = n.toLocaleString();
+    el.textContent = final;
+    if (!document.hidden && n > 0) {
+      const t0 = performance.now();
+      (function tick() { const k = Math.min(1, (performance.now() - t0) / 1000); el.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))).toLocaleString(); if (k < 1) requestAnimationFrame(tick); })();
+    }
+    setTimeout(() => { el.textContent = final; }, 1300);
   }
   fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(st => {
     const r = st.reserve || {}, so = st.social || {}, num = (v) => Number(v) || 0;
