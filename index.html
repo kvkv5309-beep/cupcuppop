@@ -121,6 +121,8 @@
   .tier.done { border-style: solid; background: #FFF3EA; }
   .tier .got { display: none; position: absolute; top: 10px; right: 10px; z-index: 1; background: var(--green); color: #fff; font-size: 12px; font-weight: 700; padding: 1px 10px; border-radius: 99px; }
   .tier.done .got { display: block; }
+  .tier.done .num { background: var(--green); }
+  .tier.done .num::after { content: " 達標！"; }
   .tier .pic.mystery { align-items: center; font-size: 64px; color: #D9BFA2; font-weight: 900; }
   .tiers.three { grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 820px) { .tiers.three { grid-template-columns: 1fr; row-gap: 26px; } }
@@ -185,10 +187,10 @@
       <div class="upd" data-upd></div>
     </div>
     <div class="tiers" id="reserveTiers">
-      <div class="tier"><div class="num">300 人</div><div class="got">已達成</div><div class="pic"><img src="img/rewards/drink.png" alt="預約限定飲品「啵啵開幕特調」" loading="lazy"></div><h3>1,000 金幣＋預約限定飲品</h3><p>「啵啵開幕特調」：鮮奶油奶茶加芋圓和珍珠，只有預約獎勵才解鎖的祕密配方。</p></div>
-      <div class="tier"><div class="num">1,000 人</div><div class="got">已達成</div><div class="pic wide"><img src="img/rewards/store.jpg" alt="限定店面「開幕慶典」：氣球、彩帶和祝賀花籃" loading="lazy"></div><h3>限定店面「開幕慶典」</h3><p>彩帶、氣球和祝賀花籃，把整間店換成開幕日的熱鬧樣子。</p></div>
-      <div class="tier"><div class="num">3,000 人</div><div class="got">已達成</div><div class="pic"><img src="img/rewards/bunny.png" alt="莓莓穿「開幕直播主」服裝" loading="lazy"></div><h3>莓莓「開幕直播主」服裝</h3><p>應援 T 恤配彩帶髮箍、愛心自拍棒，穿著時直播爆紅獎勵加倍，還有限定台詞。</p></div>
-      <div class="tier"><div class="num">5,000 人</div><div class="got">已達成</div><div class="pic"><img src="img/rewards/magpie.png" alt="喜鵲信差「喜喜」" loading="lazy"></div><h3>喜鵲信差提早來店</h3><p>喜鵲「喜喜」會帶來好運和常客們寄給店長的明信片，預約玩家還多一張限定明信片。</p></div>
+      <div class="tier"><div class="num">300 人</div><div class="got">✓ 已達標</div><div class="pic"><img src="img/rewards/drink.png" alt="預約限定飲品「啵啵開幕特調」" loading="lazy"></div><h3>1,000 金幣＋預約限定飲品</h3><p>「啵啵開幕特調」：鮮奶油奶茶加芋圓和珍珠，只有預約獎勵才解鎖的祕密配方。</p></div>
+      <div class="tier"><div class="num">1,000 人</div><div class="got">✓ 已達標</div><div class="pic wide"><img src="img/rewards/store.jpg" alt="限定店面「開幕慶典」：氣球、彩帶和祝賀花籃" loading="lazy"></div><h3>限定店面「開幕慶典」</h3><p>彩帶、氣球和祝賀花籃，把整間店換成開幕日的熱鬧樣子。</p></div>
+      <div class="tier"><div class="num">3,000 人</div><div class="got">✓ 已達標</div><div class="pic"><img src="img/rewards/bunny.png" alt="莓莓穿「開幕直播主」服裝" loading="lazy"></div><h3>莓莓「開幕直播主」服裝</h3><p>應援 T 恤配彩帶髮箍、愛心自拍棒，穿著時直播爆紅獎勵加倍，還有限定台詞。</p></div>
+      <div class="tier"><div class="num">5,000 人</div><div class="got">✓ 已達標</div><div class="pic"><img src="img/rewards/magpie.png" alt="喜鵲信差「喜喜」" loading="lazy"></div><h3>喜鵲信差提早來店</h3><p>喜鵲「喜喜」會帶來好運和常客們寄給店長的明信片，預約玩家還多一張限定明信片。</p></div>
     </div>
     <p class="hint">預約人數＝App Store 預購＋Google Play 預先註冊＋封測報名，每天更新</p>
   </section>
@@ -207,9 +209,9 @@
       <div class="upd" data-upd></div>
     </div>
     <div class="tiers three" id="socialTiers">
-      <div class="tier"><div class="num">200 人</div><div class="got">已達成</div><div class="pic mystery">🪙</div><h3>500 金幣</h3><p>給每一位店長的見面禮，多升級一台設備。</p></div>
-      <div class="tier"><div class="num">500 人</div><div class="got">已達成</div><div class="pic mystery">？</div><h3>1,500 金幣＋神秘限定裝飾</h3><p>只有粉絲一起解鎖才拿得到的店內裝飾，達標時揭曉。</p></div>
-      <div class="tier"><div class="num">1,000 人</div><div class="got">已達成</div><div class="pic mystery">？</div><h3>3,000 金幣＋神秘限定背景或服裝</h3><p>最大的一份驚喜，達標時揭曉！</p></div>
+      <div class="tier"><div class="num">200 人</div><div class="got">✓ 已達標</div><div class="pic mystery">🪙</div><h3>500 金幣</h3><p>給每一位店長的見面禮，多升級一台設備。</p></div>
+      <div class="tier"><div class="num">500 人</div><div class="got">✓ 已達標</div><div class="pic mystery">？</div><h3>1,500 金幣＋神秘限定裝飾</h3><p>只有粉絲一起解鎖才拿得到的店內裝飾，達標時揭曉。</p></div>
+      <div class="tier"><div class="num">1,000 人</div><div class="got">✓ 已達標</div><div class="pic mystery">？</div><h3>3,000 金幣＋神秘限定背景或服裝</h3><p>最大的一份驚喜，達標時揭曉！</p></div>
     </div>
     <p class="hint">追蹤人數＝Instagram 粉絲＋Facebook 追蹤，每天更新</p>
   </section>
